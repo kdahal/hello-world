@@ -5,9 +5,12 @@
 <h2>what is happining?</h2>
 <h2>what is happining?</h2>
 <h2>what is happining?</h2>
-<a href="https://www.facebook.com/profile.php?id=100010814089075"><i class="fa fa-facebook-official w3-hover-opacity"></i></a>
-    <i class="fa fa-instagram w3-hover-opacity"></i>
-    <i class="fa fa-snapchat w3-hover-opacity"></i>
-    <i class="fa fa-pinterest-p w3-hover-opacity"></i>
-    <a href="https://twitter.com/kumdahal"><i class="fa fa-twitter w3-hover-opacity"></i></a>
-    <a href="https://www.linkedin.com/in/kumar-dahal/"><i class="fa fa-linkedin w3-hover-opacity"></i></a>
+<span>MNO, MVNO, MVNA and MVNE. Extensive knowledge of design principles for voice and data systems
+Solid knowledge of VOIP systems design and programming
+Excellent creativity and solutions orientation
+Firm understanding of technical requirements
+Excellent verbal and written communication abilities
+Strong ability to explain systems operations to clients
+Oversees systems installation and implementation
+Excellent problem-solving and troubleshooting abilities
+Good maintenance of installed systems</span>
