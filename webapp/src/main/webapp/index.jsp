@@ -14,3 +14,10 @@ Strong ability to explain systems operations to clients
 Oversees systems installation and implementation
 Excellent problem-solving and troubleshooting abilities
 Good maintenance of installed systems</span>
+<div class="w3-container">
+          <p><i class="fa fa-briefcase fa-fw w3-margin-right w3-large w3-text-teal"></i>DevOps/Product Manager at Hotel Engine</p>
+          <p><i class="fa fa-home fa-fw w3-margin-right w3-large w3-text-teal"></i>Aurora, Colorado</p>
+          <p><i class="fa fa-envelope fa-fw w3-margin-right w3-large w3-text-teal"></i>kumar.dahal@outlook.com</p>
+          <p><i class="fa fa-phone fa-fw w3-margin-right w3-large w3-text-teal"></i>720-352-3978</p>
+          <p><i class="fa fa-linkedin fa-fw w3-margin-right w3-large w3-text-teal"></i><a href="https://www.linkedin.com/in/kumar-dahal/">https://www.linkedin.com/in/kumar-dahal/</a></p>
+          <hr>
