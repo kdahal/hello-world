@@ -2,4 +2,4 @@
 
 Simple Maven Project
 sample porject for docker
-this is second time testing.
+Finally, setup with Jenkins in the server
