@@ -21,7 +21,7 @@
 <!-- Header -->
 <header class="w3-display-container w3-wide bgimg " id="home">
   <div class="w3-display-middle w3-text-white w3-center">
-    <h1 class="w3-jumbo">HINDU PRIEST</h1>
+    <h1 class="w3-jumbo">HINDU </h1>
     <h2>Laxman Sastri & Ram Prasad</h2>
     <h2><b>Service Puja & Astrology</b></h2>
   </div>
