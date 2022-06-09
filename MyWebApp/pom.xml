@@ -1,0 +1,18 @@
+<properties>
+    <sonar.cpd.exclusions>
+        **/dto/**/*,
+        **/entity/**/*
+    </sonar.cpd.exclusions>
+</properties>
+<properties>
+<sonar.issue.ignore.multicriteria>e1</sonar.issue.ignore.multicriteria>
+    <sonar.issue.ignore.multicriteria.e1.ruleKey>
+        java:S4784
+    </sonar.issue.ignore.multicriteria.e1.ruleKey>
+    <sonar.issue.ignore.multicriteria.e1.resourceKey>
+        **/commons/**/*
+    </sonar.issue.ignore.multicriteria.e1.resourceKey>
+</properties>
+sonar.issue.ignore.multicriteria=e1
+sonar.issue.ignore.multicriteria.e1.ruleKey=java:S106
+sonar.issue.ignore.multicriteria.e1.resourceKey=**/SonarExclude.java
