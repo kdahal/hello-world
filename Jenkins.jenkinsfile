@@ -1,3 +1,14 @@
+@Library('jenkins-reusable@develop')
+import hudson.*
+import groovy.json.JsonSlurperClassic
+import java.util.*
+import org.jenkinsci.plugins.gwt.GenericTrigger;
+// a little cheeky; to be able to use hidden parameters.
+// import com.wangyin.parameter.WHideParameterDefinition;
+
+
+
+
 pipeline {
     agent any
 
@@ -53,29 +64,6 @@ pipeline {
             
             
         }
-
-stage('run') {
-    steps {
-        script {
-            def data = [
-                attachments:[
-                    [
-                        mxIp : params.MX_IP,
-                        mxPassword : params.MX_PASSWORD,
-                        policyName : params.POLICY_NAME,
-                    ]
-                ]
-            ]
-            writeJSON(file: 'parameters.json', json: data)
-        }
-        
-        sh 'java -jar /var/lib/jenkins/workspace/create_pass_criteria/target/create_pass_criteria-8.0.125-SNAPSHOT.jar'
-    }
-}
-
-
-
-
         
         stage('archive') {
             steps {
