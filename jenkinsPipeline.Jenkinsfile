@@ -1,4 +1,4 @@
-import groovy.json.JsonOutput
+import groovy.json.JsonSlurperClassic
 
 pipeline {
     agent any
@@ -55,20 +55,6 @@ pipeline {
             
             
         }
-
-        
-stage('Run Json'){
-steps {
-     script {
-
-         def json = readJSON file: 'pipeline.json'
-         def jsonFormat = JsonOutput.toJson(json)
-         prettyJSON = JsonOutput.prettyPrint(jsonFormat)
-                echo "${prettyJSON}"
-            }      
-        }
-}
-
 
 
         
