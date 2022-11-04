@@ -1,23 +1,76 @@
 pipeline {
     agent any
- 
+
+    environment { 
+        NAME = 'vignesh'
+    }
+
+    parameters {
+        choice(name: 'environment', choices: ['dev', 'uat', 'prod'], description: 'Select environment to deploy')
+    }
     stages {
-        stage ('checkout') {
+        stage('Maven Version Check') {
             steps {
-                git 'https://github.com/kdahal/docker-jenkins-integration-sample.git '
+                bat 'mvn -v'
+                
+            }
+            
+            
+            
+        }
+        
+        stage('Git Clone') {
+            steps {
+                git 'https://github.com/kdahal/hello-world.git'
+                
+            }
+            
+            
+            
+        }
+        
+        stage('Mavne Clean') {
+            steps {
+                bat 'mvn clean test package'
+                
             }
         }
         
         
-        stage('Mavne Build') {
+        stage('Nexus Upload') {
             steps {
-                bat 'mvn clean install'
+                nexusArtifactUploader artifacts: [[artifactId: 'maven-project', classifier: '', file: 'webapp\\target\\', type: 'war']], credentialsId: 'Nexus', groupId: 'com.example.maven-project', nexusUrl: '192.168.0.17:8081/', nexusVersion: 'nexus3', protocol: 'http', repository: 'maven-snapshots', version: '1.0-SNAPSHOT'
                 
             }
+        }
         
-        }  
+        stage('Deploy') {
+            steps {
+                deploy adapters: [tomcat8(credentialsId: 'deployer', path: '', url: 'http://localhost:8090/manager/text/deploy?config=file:/path/context.xml')], contextPath: null, war: '**/*.war'
+                
+            }
+            
+            
+            
+        }
+        
+        stage('archive') {
+            steps {
+                archiveArtifacts artifacts: '**', followSymlinks: false
+                
+            }
+            
+            
+            
+        }
+        
+        
+        
+        
     }
     
+    
+
     post {
         always { 
             echo 'I will always say Hello again!'
@@ -28,9 +81,5 @@ pipeline {
         failure {
             echo 'I will say Hello only if job is failure'
         }
-    
-        
-        
-        
     }
 }
