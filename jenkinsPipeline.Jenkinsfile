@@ -1,3 +1,5 @@
+import groovy.json.JsonOutput
+
 pipeline {
     agent any
 
@@ -54,24 +56,15 @@ pipeline {
             
         }
 
-stage('run') {
-    steps {
-        script {
-            def data = [
-                attachments:[
-                    [
-                        mxIp : params.MX_IP,
-                        mxPassword : params.MX_PASSWORD,
-                        policyName : params.POLICY_NAME,
-                    ]
-                ]
-            ]
-            writeJSON(file: 'parameters.json', json: data)
+steps {
+     script {
+
+         def json = readJSON file: 'pipeline.json'
+         def jsonFormat = JsonOutput.toJson(json)
+         prettyJSON = JsonOutput.prettyPrint(jsonFormat)
+                echo "${prettyJSON}"
+            }      
         }
-        
-        sh 'java -jar /var/lib/jenkins/workspace/create_pass_criteria/target/create_pass_criteria-8.0.125-SNAPSHOT.jar'
-    }
-}
 
 
 
