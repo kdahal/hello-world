@@ -56,6 +56,8 @@ pipeline {
             
         }
 
+        
+stage('Run Json'){
 steps {
      script {
 
@@ -65,7 +67,7 @@ steps {
                 echo "${prettyJSON}"
             }      
         }
-
+}
 
 
 
