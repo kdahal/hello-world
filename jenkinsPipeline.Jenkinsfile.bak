@@ -1,8 +1,4 @@
-import groovy.json.JsonSlurper
-
-
-def appJson = new File('C:\Users\kumar\OneDrive\Desktop\My Projects\Hellow-World\hello-world\pipeline');
-def Json =new JsonSlurper().parseText (appJson.text);
+import groovy.json.JsonSlurperClassic
 
 pipeline {
     agent any
