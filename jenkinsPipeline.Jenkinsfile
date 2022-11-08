@@ -1,5 +1,3 @@
-def appJson = new File('c:\\Jenkins\\pipeline.json');
-def Json =new JsonSlurper().parseText (appJson.text);
 
 
 pipeline {
