@@ -1,28 +1,36 @@
 {
-    "receptions": [
+    "environments": [
         {
-            "loginacteur": "zex9450",
-            "codeapplication": "SDD",
-            "version": "1.0",
-            "datereception": "2019-08-01",
-            "numtran": 15000,
-            "lien": "",
-            "datepriseencompte": "2019-08-01",
-            "composants": [
-                {
-                    "composant": "Gestion sapp ear",
-                    "version": "1.0.8",
-                    "technologie": "JBOSS",
-                    "installations": [
-                        {
-                            "environnement": "SDD QF",
-                            "modedeploiement": "AUTO (JENKINS)",
-                            "dateinstallation": "2019-07-31",
-                            "loginacteur": "zex9450"
-                        }
-                    ]
-                }
-            ]
+
+
+        }
+
+
+    ],
+    "branches": [
+        {
+
+        }
+
+
+    ],
+    "gitURL": "https://github.com/kdahal/hello-world.git",
+    "jenkinsBuildURL": "http://192.168.0.17:8080/job/Maven_project/",
+    "applicationId":"",
+    "CiData":[
+        {
+
+        }
+    ],
+    "buildSteps": [
+        {
+
+        }
+    ],
+    "deploySteps": [
+        {
+
         }
     ]
+
 }
