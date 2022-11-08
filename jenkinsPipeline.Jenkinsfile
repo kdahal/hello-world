@@ -1,7 +1,7 @@
 import groovy.json.JsonSlurper
 
 
-def appJson = new File('C:\\ProgramData\\Jenkins\\.jenkins\\workspace\\Maven_projectpipeline.json');
+def appJson = new File('C:\\ProgramData\\Jenkins\\.jenkins\\workspace\\Maven_project\\pipeline.json');
 def Json =new JsonSlurper().parseText (appJson.text);
 
 pipeline {
