@@ -6,7 +6,9 @@ import org.jenkinsci.plugins.gwt.GenericTrigger;
 // a little cheeky; to be able to use hidden parameters.
 // import com.wangyin.parameter.WHideParameterDefinition;
 
-
+import groovy.json.JsonSlurper
+def appJson = new File('c:\\Jenkins\\pipeline.json');
+def Json =new JsonSlurper().parseText (appJson.text);
 
 
 pipeline {
